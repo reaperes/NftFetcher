@@ -1,0 +1,22 @@
+{
+  "name": "nft-fetcher",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "local:chain": "ganache -l 8500000 -k london",
+    "local:deploy": "truffle migrate --network local",
+    "local:test": "truffle test --network local",
+    "dev:deploy": "env-cmd --rc-file .env-cmdrc -e development truffle migrate --network baobab",
+    "prod:deploy": "env-cmd --rc-file .env-cmdrc -e production truffle migrate --network cypress"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.5.0",
+    "chai-as-promised": "7.1.1",
+    "env-cmd": "10.1.0",
+    "ganache": "7.0.4",
+    "tiny-invariant": "1.2.0",
+    "truffle": "5.5.10",
+    "truffle-assertions": "0.9.2",
+    "truffle-hdwallet-provider-klaytn": "1.4.2"
+  }
+}
